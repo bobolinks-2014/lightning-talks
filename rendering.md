@@ -44,6 +44,7 @@ You can also render a file outside your file structure.
 ```
 render file:
 "/u/apps/cheese_factory/current/app/views/cheeses/show"
+```
 
 You can render other stuff like JavaScript:
 

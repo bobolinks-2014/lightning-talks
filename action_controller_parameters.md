@@ -69,18 +69,18 @@ Sets the permitted attribute to true. This can be used to pass mass assignment. 
 
 <p>
 params = ActionController::Parameters.new(name: 'Francesco')
- </br>
+ <br />
 params.permitted?  # => false
-</br>
- </br>
+<br />
+ <br />
 Person.new(params) # => ActiveModel::ForbiddenAttributesError
- </br>
+ <br />
 params.permit!
- </br>
+ <br />
 params.permitted?  # => true
- </br>
+ <br />
 Person.new(params) # => #<Person id: nil, name: "Francesco">
- </br>
+ <br />
 </p>
 
 <h2>SOURCES</h2>

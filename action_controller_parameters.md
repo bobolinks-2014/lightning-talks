@@ -20,13 +20,9 @@ def update
    end
  </br>
    private
-  </br>
      def person_params
-    </br>
        params.require(:person).permit(:name, :age)
-      </br>
     end
-    </br>
 end
 </pre></code>
 
@@ -73,12 +69,6 @@ ActionController::Parameters.new(person: {}).require(:person)
 <h2>PERMIT</h2>
 <p>
 Sets the permitted attribute to true. This can be used to pass mass assignment. Returns self.
-
-<code>
-class Person < ActiveRecord::Base
- <br />
-end
-</code>
 
 <p>
 params = ActionController::Parameters.new(name: 'Francesco')

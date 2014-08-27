@@ -12,7 +12,7 @@
 
 ###Example:
 Models:
-''''ruby
+'''ruby
 
 class Swineflu < ActiveRecord::Base
   belongs_to :death, polymorphic: true
@@ -26,10 +26,10 @@ class Human < ActiveRecord::Base
   has_many :swineflus, as: :death
 end
 
-''''
+'''
 
 Migrations:
-''''ruby
+'''ruby
 
 class CreateSwineflus < ActiveRecord::Migration
   def change
@@ -43,22 +43,22 @@ class CreateSwineflus < ActiveRecord::Migration
   end
 end
 
-''''
+'''
 In Short Form:
-''''ruby
+'''ruby
 
 t.references :death, polymorphic: true
 
-''''
+'''
 
 Let's say that you wanted to see which swineflus @human has been infected by and which host @swineflu has infected:
-''''ruby
+'''ruby
 
 @human.swineflus #=> Will return all swineflus of the human
 
 @swineflu.death #=> Will return an instance of a human or pig which it infected
 
-''''
+'''
 
 
 ![SoCuteSoDeadly](http://blogs-images.forbes.com/stevensalzberg/files/2011/10/swine-flu1.jpg) 

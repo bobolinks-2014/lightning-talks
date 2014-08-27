@@ -12,27 +12,23 @@ end
 
 <h2>NOT MASS ASSIGNMENT:</h2>
 
-<code>
+<pre><code>
 def update
-</br>
      person = current_account.people.find(params[:id])
-    </br>
-    < person.update!(person_params)
-    </br>
-    < redirect_to person
-    </br>
-  < end
+     person.update!(person_params)
+     redirect_to person
+   end
  </br>
    private
   </br>
-    < def person_params
+     def person_params
     </br>
-      << params.require(:person).permit(:name, :age)
+       params.require(:person).permit(:name, :age)
       </br>
     end
     </br>
 end
-</code>
+</pre></code>
 
 <h2>ISSUES</h2>
 <ul>
@@ -88,8 +84,6 @@ end
 params = ActionController::Parameters.new(name: 'Francesco')
  <br />
 params.permitted?  # => false
-</p>
-<p>
  <br />
 Person.new(params) # => ActiveModel::ForbiddenAttributesError
  <br />

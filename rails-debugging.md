@@ -6,7 +6,8 @@ As our development environments get more complex, debugging is more important th
 
 View helpers let us isolate variables in a view and inspect them right on the page when it's rendered in the browser. For examples of this, let's take a look at a very basic craigslist implementation in Rails. This is a chunk of our categories/show view:
 
-```<h1><%= @category.name.capitalize %></h1>
+```html
+<h1><%= @category.name.capitalize %></h1>
 <table>
   <tr>
     <th>Title</th>
@@ -27,7 +28,8 @@ Here's what we see when we load the page:
 
 If we insert the "debug" helper to inspect @articles....
 
-```<th>Title</th>
+```html
+<th>Title</th>
     <th>Text</th>
   </tr>
   <!-- Let's try to use a view helper here to make sure we're including the right objects in the @articles variable. -->

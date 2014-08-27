@@ -2,7 +2,7 @@
 
 ###So What Are Polymorphic Associations?
 
-![YOLOCITY](http://imoveilive.com/wp-content/uploads/2014/05/mighty_morphin_power_rangers_by_butters101-d73baih.jpg) ######But Better
+![YOLOCITY](http://imoveilive.com/wp-content/uploads/2014/05/mighty_morphin_power_rangers_by_butters101-d73baih.jpg) #####But Better
 
 ###Basics:
 * When one model can belong to more than one other model through a single association

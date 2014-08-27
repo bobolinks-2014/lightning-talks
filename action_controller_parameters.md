@@ -1,16 +1,16 @@
 <h1>Action Controller Parameters</h1>
 
-<h2>MASS ASSIGNMENT:</h2>
+<h2>MASS ASSIGNMENT</h2>
 
-<p>
+<code>
 def create
     Person.create(params[:person])
 end
-</p>
+</code>
 
 <h2>NOT MASS ASSIGNMENT:</h2>
 
-<p>
+<code>
 def update
     person = current_account.people.find(params[:id])
     person.update!(person_params)
@@ -22,12 +22,12 @@ def update
       params.require(:person).permit(:name, :age)
     end
 end
-</p>
+</code>
 
-<h2>ISSUES:</h2>
+<h2>ISSUES</h2>
 <ul>
+<li>Whitelists vs blacklists</li>
 <li>Rails does not make any distinction between query string parameters and POST parameters, and both are available in the params hash in your controller</li>
-<li>whitelists vs blacklists</li>
 <li>Prevent accidentally allowing data to be changed which shouldn’t be exposed (Github 2012)</li>
 </ul>
 
@@ -48,12 +48,19 @@ Ensures that a parameter is present. If it's present, returns the parameter at t
 
 <p>
 ActionController::Parameters.new(person: { name: 'Francesco' }).require(:person)
+ <br />
 # => {"name"=>"Francesco"}
+</p>
 
+<p>
 ActionController::Parameters.new(person: nil).require(:person)
+ <br />
 # => ActionController::ParameterMissing: param not found: person
+</p>
 
+<p>
 ActionController::Parameters.new(person: {}).require(:person)
+ <br />
 # => ActionController::ParameterMissing: param not found: person
 </p>
 
@@ -61,22 +68,36 @@ ActionController::Parameters.new(person: {}).require(:person)
 <p>
 Sets the permitted attribute to true. This can be used to pass mass assignment. Returns self.
 
+<p>
 class Person < ActiveRecord::Base
+ <br />
 end
+</p>
 
+<p>
 params = ActionController::Parameters.new(name: 'Francesco')
+ <br />
 params.permitted?  # => false
+ <br />
 Person.new(params) # => ActiveModel::ForbiddenAttributesError
+ <br />
 params.permit!
+ <br />
 params.permitted?  # => true
+ <br />
 Person.new(params) # => #<Person id: nil, name: "Francesco">
+ <br />
 </p>
 
 <h2>SOURCES</h2>
 <p>
 great introduction
+ <br />
 http://code.tutsplus.com/tutorials/mass-assignment-rails-and-you--net-31695
+ <br />
 
 multiple models one form
+ <br />
 http://railscasts.com/episodes/196-nested-model-form-part-1
+ <br />
 </p>

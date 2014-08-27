@@ -4,7 +4,9 @@
 
 <code>
 def create
-    Person.create(params[:person])
+##
+    <Person.create(params[:person])
+##
 end
 </code>
 
@@ -12,15 +14,23 @@ end
 
 <code>
 def update
-    person = current_account.people.find(params[:id])
-    person.update!(person_params)
-    redirect_to person
-  end
- 
-  private
-    def person_params
-      params.require(:person).permit(:name, :age)
+</br>
+    < person = current_account.people.find(params[:id])
+    </br>
+    < person.update!(person_params)
+    </br>
+    < redirect_to person
+    </br>
+  < end
+ </br>
+   private
+  </br>
+    < def person_params
+    </br>
+      << params.require(:person).permit(:name, :age)
+      </br>
     end
+    </br>
 end
 </code>
 

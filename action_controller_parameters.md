@@ -11,16 +11,16 @@ end
 <h2>NOT MASS ASSIGNMENT:</h2>
 
 <pre><code>
-	def update
-    person = current_account.people.find(params[:id])
-    person.update!(person_params)
-    redirect_to person
-  end
+def update
+  person = current_account.people.find(params[:id])
+  person.update!(person_params)
+  redirect_to person
+end
  </br>
- 	private
-  def person_params
-    params.require(:person).permit(:name, :age)
-  end
+private
+def person_params
+  params.require(:person).permit(:name, :age)
+end
 </pre></code>
 
 <h2>ISSUES</h2>
@@ -69,17 +69,18 @@ Sets the permitted attribute to true. This can be used to pass mass assignment. 
 
 <p>
 params = ActionController::Parameters.new(name: 'Francesco')
- <br />
+ </br>
 params.permitted?  # => false
- <br />
+</br>
+ </br>
 Person.new(params) # => ActiveModel::ForbiddenAttributesError
- <br />
+ </br>
 params.permit!
- <br />
+ </br>
 params.permitted?  # => true
- <br />
+ </br>
 Person.new(params) # => #<Person id: nil, name: "Francesco">
- <br />
+ </br>
 </p>
 
 <h2>SOURCES</h2>

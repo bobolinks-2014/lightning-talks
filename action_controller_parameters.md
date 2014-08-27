@@ -8,7 +8,7 @@ def create
 end
 </pre></code>
 
-<h2>NOT MASS ASSIGNMENT:</h2>
+<h2>NOT MASS ASSIGNMENT</h2>
 
 <pre><code>
 def update

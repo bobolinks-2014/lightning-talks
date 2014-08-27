@@ -4,9 +4,9 @@
 
 <code>
 def create
-##
-    <Person.create(params[:person])
-##
+</br>
+    Person.create(params[:person])
+</br>
 end
 </code>
 
@@ -15,7 +15,7 @@ end
 <code>
 def update
 </br>
-    < person = current_account.people.find(params[:id])
+     person = current_account.people.find(params[:id])
     </br>
     < person.update!(person_params)
     </br>
@@ -42,9 +42,9 @@ end
 </ul>
 
 <h2>ASSUMED</h2>
-<p>
+<code>
 params.permit(:id)
-</p>
+</code>
 
 <h2>SOLUTION</h2>
 <p>
@@ -78,16 +78,18 @@ ActionController::Parameters.new(person: {}).require(:person)
 <p>
 Sets the permitted attribute to true. This can be used to pass mass assignment. Returns self.
 
-<p>
+<code>
 class Person < ActiveRecord::Base
  <br />
 end
-</p>
+</code>
 
 <p>
 params = ActionController::Parameters.new(name: 'Francesco')
  <br />
 params.permitted?  # => false
+</p>
+<p>
  <br />
 Person.new(params) # => ActiveModel::ForbiddenAttributesError
  <br />
@@ -100,14 +102,19 @@ Person.new(params) # => #<Person id: nil, name: "Francesco">
 </p>
 
 <h2>SOURCES</h2>
-<p>
-great introduction
+
+<ul>
+<li>Great introduction
  <br />
 http://code.tutsplus.com/tutorials/mass-assignment-rails-and-you--net-31695
  <br />
+</li>
 
-multiple models one form
+<li>
+Multiple models, one form
  <br />
 http://railscasts.com/episodes/196-nested-model-form-part-1
  <br />
-</p>
+</li>
+</ul>
+

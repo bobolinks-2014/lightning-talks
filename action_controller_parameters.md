@@ -2,28 +2,25 @@
 
 <h2>MASS ASSIGNMENT</h2>
 
-<code>
+<pre><code>
 def create
-</br>
     Person.create(params[:person])
-</br>
 end
-</code>
+</pre></code>
 
 <h2>NOT MASS ASSIGNMENT:</h2>
 
 <pre><code>
-def update
-     person = current_account.people.find(params[:id])
-     person.update!(person_params)
-     redirect_to person
-   end
+	def update
+    person = current_account.people.find(params[:id])
+    person.update!(person_params)
+    redirect_to person
+  end
  </br>
-   private
-     def person_params
-       params.require(:person).permit(:name, :age)
-    end
-end
+ 	private
+  def person_params
+    params.require(:person).permit(:name, :age)
+  end
 </pre></code>
 
 <h2>ISSUES</h2>

@@ -66,7 +66,7 @@ end
 
 > Forms! Add in tag_list
 
-```Ruby
+```HTML+ERB
 	<% form_for :article do |f| %>
 		<%= f.text_field :title %>
 		<%= f.text_area :body %>

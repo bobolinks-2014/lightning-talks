@@ -3,7 +3,7 @@
 
 Rails plugin that allows users (website visitors) to give specific attributes (tags!) to multiple items. 
 
-Basically, you need to tag something? Use this gem; it does nearly everything for you. 
+You need to tag something? Use this gem; it does nearly everything for you. 
 
 ## Set Up
 

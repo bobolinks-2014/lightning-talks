@@ -47,20 +47,19 @@ rake tmp:clear                          # Clear session, cache, and socket files
 rake tmp:create                         # Creates tmp directories for sessions, cache, sockets, and pids
 ```
 
-Many of these will be familiar to you, but there are a several new ones we know very little about. 
+Many of these will be familiar to you, but there are several new ones we know very little about. 
 
-Let's explore some new, nifty tasks: 
+Let's explore some new tasks: 
 
 ###rake notes
 
-Here's the Rails description for rake notes:
+The Rails description for rake notes:
 
 ```rake notes                                          # Enumerate all annotations (use notes:optimize, :fixme, :todo for focus)```
 
 There are three default notes that are built into Rails apps: OPTIMIZE, FIXME and TODO. 
-Note: They need to be in upcase in the code, but downcase in the terminal.
 
-#####example
+Note: They need to be in upcase in the code, but downcase in the terminal.
 
 Here's a method that needs some work
 
@@ -72,7 +71,7 @@ def format_date
 end
 ```
 
-How can I find a list of outstanding tasks tagged with 'TODO'?
+Let's find a list of notes tagged with 'TODO'?
 
 ```
 $ rake notes:todo
@@ -91,7 +90,7 @@ def full_name
 end
 ```
 
-Let's run a search for tasks tagged with 'BOBO':
+Let's run a search for notes tagged with 'BOBO':
 
 ```
 $ rake notes:custom ANNOTATION=BOBO
@@ -110,11 +109,11 @@ app/models/post.rb:
   * [5] [TODO] look for more efficient way to do this
  ```
 
-This will not return results for custom notes. If you'd like to include them, you'll need to redefine rake routes to add your own custom tag. Check out the Codemancers resources link provided below for step-by-step instructions. 
+This will not return results for custom notes. If you'd like to include them, you'll need to redefine rake routes to add your own custom tag. Check out the Codemancers resources link for step-by-step instructions on how to do this. 
 
 Also note the following: 
 
->By default, rake notes will look in the app, config, lib, bin and test directories. If you would like to search other directories, you can provide them as a comma separated list in an environment variable SOURCE_ANNOTATION_DIRECTORIES. -from RailsGuides
+>By default, rake notes will look in the app, config, lib, bin and test directories. If you would like to search other directories, you can provide them as a comma separated list in an environment variable SOURCE_ANNOTATION_DIRECTORIES.  - RailsGuides
 
 ###rake assets:precompile
 
@@ -122,20 +121,21 @@ Have you ever deployed to Heroku and wondered, 'Where the heck is my CSS?'
 
 Rails comes with a rake task to compile the assets. By default, compiled assets are written to the /assets directory.  
 
->You can call this task on the server during deployment to create compiled versions of your assets directly on the server.
+>You can call this task on the server during deployment to create compiled versions of your assets directly on the server.  - RailsGuides
 
 Here's what you probably missed: 
 
 ```$ RAILS_ENV=production bin/rake assets:precompile```
 
-For more info on the asset pipeline, check out the RailsGuide link below. 
+For more info on the asset pipeline, check out the RailsGuide resources link. 
 
 
 ###custom rake tasks
 
-If you're wanting something fancy, you can even build your own rake task.
+If you want something fancy, you can even build your own rake task.
 
 Let's try adding everyone's favorite rake command: `rake db:yolo`
+
 Rails was kind enough to give us a generator for creating new tasks.
 
 ```Ruby
@@ -150,7 +150,6 @@ namespace :bobo do
   desc "TODO"
   task yolo: :environment do
   end
-
 end
 ```
 
@@ -160,11 +159,10 @@ We'll need to make a couple changes for our `bobo:yolo`
 namespace :bobo do
   desc "drop, create, migrate bobo's database"
   task yolo: [:environment,'db:drop', 'db:create', 'db:migrate']
-
 end
 ```
 
-Let's give it a whirl!
+Let's try it out:
 
 ```
 $ rake bobo:yolo
@@ -178,17 +176,20 @@ $ rake bobo:yolo
    -> 0.0215s
 == 20140825014902 CreatePosts: migrated (0.0218s) =============================
 
-$
 ```
 
 Hooray!
 
-To learn more about rake tasks and custom rake tasks, check out the resources below...
+To learn more about rake tasks, check out the resources below...
 
 ##Resources
 
 [RailsGuides: The Rails Command Line](http://guides.rubyonrails.org/command_line.html#rake)
+
 [RailsGuides: The Asset Pipeline](http://guides.rubyonrails.org/asset_pipeline.html)
+
 [Jaco Pretorius: All Rails db Rake Tasks and What They Do](http://www.jacopretorius.net/2014/02/all-rails-db-rake-tasks-and-what-they-do.html)
+
 [Codedecoder: custom rake task in rails](http://codedecoder.wordpress.com/2013/05/03/custom-rake-task-in-rails/)
+
 [Codemancers: Redefine rake routes to add your own custom tag in Rails](http://crypt.codemancers.com/posts/2013-07-12-redefine-rake-routes-to-add-your-own-custom-tag-in-Rails/)

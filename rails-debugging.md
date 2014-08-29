@@ -2,6 +2,14 @@
 
 As our development environments get more complex, debugging is more important than ever. Rails has a few handy tools that let us peek behind the scenes and see what's going on.
 
+## Links (TL;DR)
+
+### Built-in Rails Debugging: http://guides.rubyonrails.org/debugging_rails_applications.html
+
+### Better Errors Gem: https://github.com/charliesome/better_errors
+
+## Built-In Debugging
+
 ## View Helpers - debug, to_yaml, inspect
 
 View helpers let us isolate variables in a view and inspect them right on the page when it's rendered in the browser. For examples of this, let's take a look at a very basic craigslist implementation in Rails. This is a chunk of our categories/show view:
@@ -64,3 +72,23 @@ You can also use inspect.
 
 Basically, pick your poison. View helpers are your console log, your puts, your soul's innermost reflection. Use them wisely, and don't forget to get rid of them when you want your page looking nice again.
 
+
+##Better Errors
+Better errors is a gem that "replaces the standard Rails error page with a much better and more useful error page." It can do all kinds of cool stuff. 
+
+To get the full feature set, you need to do two things. First, you need to add it to your Gemfile:
+
+
+```ruby
+group :development do
+  gem "better_errors"
+end
+```
+
+And next you need to add a secondary gem to your Gemfile:
+
+```ruby
+gem "binding_of_caller"
+```
+
+Since we're using Rails, that's all you need to do to get it working. Once you've done that, you've got a dramatically improved error page that gives you fun features like a full stack trace to help you find errors, source code inspection with syntax coloring and error highlighting, and local and instance variable inspection.

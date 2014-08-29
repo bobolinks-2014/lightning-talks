@@ -1,5 +1,5 @@
 # User Experience - A Cheatsheet
-(Paraphrased from ![this great TutsPlus article about UX](http://webdesign.tutsplus.com/articles/the-basics-of-great-ux--webdesign-8823).)
+(Paraphrased from [this great TutsPlus article about UX](http://webdesign.tutsplus.com/articles/the-basics-of-great-ux--webdesign-8823).)
 
 ![UX Pic](http://www.creativerealities.com/Portals/64975/images/sad-UX-happy1.jpg)
 
@@ -75,9 +75,9 @@ If it's worth using, it's worth UX design. A minimum viable product that users d
 
 ### Additional Resources
 
-![Treehouse UX Course](http://teamtreehouse.com/library/ux-basics)
-![UX vs UI](http://www.webdesignerdepot.com/2012/06/ui-vs-ux-whats-the-difference/)
-![User Experience Basics](http://www.usability.gov/what-and-why/user-experience.html)
-![Ten UX Pitfalls](http://www.dummies.com/how-to/content/top-10-ux-pitfalls.html)
+[Treehouse UX Course](http://teamtreehouse.com/library/ux-basics)
+[UX vs UI](http://www.webdesignerdepot.com/2012/06/ui-vs-ux-whats-the-difference/)
+[User Experience Basics](http://www.usability.gov/what-and-why/user-experience.html)
+[Ten UX Pitfalls](http://www.dummies.com/how-to/content/top-10-ux-pitfalls.html)
 
 

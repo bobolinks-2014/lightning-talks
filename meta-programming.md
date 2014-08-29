@@ -35,8 +35,8 @@ stuff.method_missing(:nonexistant_method)
 ````
 
 ###What can you use it for?
-*Set the default response for undefined methods.
-*Invoke dynamic functionality.
+* Set the default response for undefined methods.
+*I nvoke dynamic functionality.
 
 ````
 ...

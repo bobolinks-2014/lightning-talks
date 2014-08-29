@@ -67,7 +67,7 @@ At this point, you've thought through the needs of your client, analyzed your ta
 
 This is where humility and empathy are crucial. If you can't take feedback, you'll crash and burn here. If you've spent a ton of time on a feature that no one cares about or uses, you might need to lose it. If you left some clutter off a nav bar and users are clamoring for those links, you'll need to find a less-cluttery way to bring them back somehow. It can be hard to take user feedback when it goes against your initial vision, but you need to care more about your users than your vision if you want to be great at UX. And, as you get great at UX, your vision will naturally evolve to be closer to what your users need anyway.
 
-There are resources, like verifyapp.com and usabilla.com that can put your work in front of many users and return stats about how people use the app you've built. They cost money, but can save you much more in the long run by helping you fix big problems before they become hopelessly enmeshed with other elements of your app. Actionable, trackable feedback is an invaluable tool in your arsenal if you want to make great content that your users will love to use.
+There are resources, like [VerifyApp](www.verifyapp.com) and [Usabilla](usabilla.com) that can put your work in front of many users and return stats about how people use the app you've built. They cost money, but can save you much more in the long run by helping you fix big problems before they become hopelessly enmeshed with other elements of your app. Actionable, trackable feedback is an invaluable tool in your arsenal if you want to make great content that your users will love to use.
 
 ### Experience Excellence
 

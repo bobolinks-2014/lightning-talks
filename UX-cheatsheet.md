@@ -10,8 +10,8 @@ In the web development world, user experience includes things like how quickly a
 ### The Two UX Commandments
 
 There are two cardinal rules for user experience:
-1) Know your user.
-2) Remember that you're not your user.
+A) Know your user.
+B) Remember that you're not your user.
 
 Knowing your user means doing research into their desires, requirements, environment and habits and understanding their wants and needs as if they were your own. 
 
@@ -76,8 +76,13 @@ If it's worth using, it's worth UX design. A minimum viable product that users d
 ### Additional Resources
 
 [Treehouse UX Course](http://teamtreehouse.com/library/ux-basics)
+
 [UX vs UI](http://www.webdesignerdepot.com/2012/06/ui-vs-ux-whats-the-difference/)
+
 [User Experience Basics](http://www.usability.gov/what-and-why/user-experience.html)
+
 [Ten UX Pitfalls](http://www.dummies.com/how-to/content/top-10-ux-pitfalls.html)
+
+[Your App is Ugly Without UX](http://www.smashingmagazine.com/2014/09/01/think-your-app-is-beautiful-not-without-user-experience-design/)
 
 

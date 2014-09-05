@@ -29,6 +29,7 @@ Git Practices
 			* Rebasing is important so that your commit histroy looks linear even though you had branches in parallel.
 		* If you used `git stash` earlier:
 			* `git stash apply` will bring those files you stashed back out into your unstaged area.
+			* `git stash drop` will get rid of all files in the stash.
 			* `git status` to make sure that those files you stashed are back as unstaged.
 		* Get back to work!
 		* If you get merge conflicts: [link](http://css-tricks.com/deal-merge-conflicts-git/)
